@@ -1,0 +1,161 @@
+{% extends "base.html" %}
+
+{% block title %}Admin Dashboard{% endblock %}
+
+{% block content %}
+<h2 class="mb-4">Admin Dashboard</h2>
+
+<div class="row">
+  <div class="col-md-4">
+    <div class="card text-white bg-primary mb-3 shadow-sm">
+      <div class="card-body">
+        <h5 class="card-title">Total Doctors</h5>
+        <p class="card-text fs-3">12</p> </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card text-white bg-success mb-3 shadow-sm">
+      <div class="card-body">
+        <h5 class="card-title">Total Patients</h5>
+        <p class="card-text fs-3">152</p> </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card text-white bg-info mb-3 shadow-sm">
+      <div class="card-body">
+        <h5 class="card-title">Total Appointments</h5>
+        <p class="card-text fs-3">45</p> </div>
+    </div>
+  </div>
+</div>
+
+<div class="row mt-4">
+  <div class="col-lg-8">
+    
+    <div class="card shadow-sm mb-4">
+      <div class="card-header">
+        <h5>Registered Doctors</h5>
+      </div>
+      <div class="card-body">
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Dr. Pandit</td>
+              <td>
+                <button class="btn btn-sm btn-info">view</button>
+                <button class="btn btn-sm btn-warning">edit</button>
+                <button class="btn btn-sm btn-danger">delete</button>
+              </td>
+            </tr>
+            <tr>
+              <td>Dr. Abcde</td>
+              <td>
+                <button class="btn btn-sm btn-info">view</button>
+                <button class="btn btn-sm btn-warning">edit</button>
+                <button class="btn btn-sm btn-danger">delete</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="card shadow-sm mb-4">
+      <div class="card-header">
+        <h5>Registered Patients</h5>
+      </div>
+      <div class="card-body">
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Mrs. Jayant</td>
+              <td>
+                <button class="btn btn-sm btn-info">view</button>
+                <button class="btn btn-sm btn-danger">delete</button>
+                <button class="btn btn-sm btn-secondary">history</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="card shadow-sm mb-4">
+      <div class="card-header">
+        <h5>Upcoming Appointments</h5>
+      </div>
+      <div class="card-body">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Sr.No.</th>
+              <th>Doctor Name</th>
+              <th>Department</th>
+              <th>Patient Name</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>0001</td>
+              <td>Dr. pandit</td>
+              <td>Cardiology</td>
+              <td>Mr. Abcde</td>
+              <td>
+                <button class="btn btn-sm btn-info">view</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="col-lg-4">
+    <div class="card shadow-sm">
+      <div class="card-header">
+        <h5>Add a new Doctor</h5>
+      </div>
+      <div class="card-body">
+        <form action="" method="POST">
+          <div class="mb-3">
+            <label for="docName" class="form-label">Full Name</label>
+            <input type="text" class="form-control" id="docName">
+          </div>
+          <div class="mb-3">
+            <label for="docEmail" class="form-label">Email</label>
+            <input type="email" class="form-control" id="docEmail">
+          </div>
+          <div class="mb-3">
+            <label for="docPassword" class="form-label">Password</label>
+            <input type="password" class="form-control" id="docPassword">
+          </div>
+          <div class="mb-3">
+            <label for="docDept" class="form-label">Department/Specialization</label>
+            <select class="form-select" id="docDept">
+              <option selected>Choose...</option>
+              <option value="1">Cardiology</option>
+              <option value="2">Oncology</option>
+              <option value="3">Neurology</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary w-100">Create</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

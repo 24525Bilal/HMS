@@ -1,0 +1,128 @@
+{% extends "base.html" %}
+
+{% block title %}Doctor Dashboard{% endblock %}
+
+{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-4">
+  <h2>Welcome Dr. Abcde</h2>
+  <a href="#" class="btn btn-outline-danger">Logout</a>
+</div>
+
+<div class="row">
+  <div class="col-lg-8">
+    
+    <div class="card shadow-sm mb-4">
+      <div class="card-header">
+        <h5>Upcoming Appointments</h5>
+      </div>
+      <div class="card-body">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Sr.No.</th>
+              <th>Patient</th>
+              <th>Time</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>0001</td>
+              <td>Mrs. Jayant</td>
+              <td>10:00 AM</td>
+              <td>
+                <button class="btn btn-sm btn-success">work on</button>
+                <button class="btn btn-sm btn-info">view details</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="card shadow-sm mb-4">
+      <div class="card-header">
+        <h5>Assigned Patients</h5>
+      </div>
+      <div class="card-body">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Mrs. Jayant</td>
+              <td>
+                <button class="btn btn-sm btn-info">view</button>
+                <button class="btn btn-sm btn-success">update</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="card shadow-sm mb-4">
+      <div class="card-header">
+        <h5>Update Patient History</h5>
+        <small>Patient Name: Mr. Abcde</small> <br>
+        <small>Visit Date: 23/01/2025</small>
+      </div>
+      <div class="card-body">
+        <form action="" method="POST">
+          <div class="mb-3">
+            <label for="diagnosis" class="form-label">Diagnosis</label>
+            <textarea class="form-control" id="diagnosis" rows="3"></textarea>
+          </div>
+          <div class="mb-3">
+            <label for="prescription" class="form-label">Prescription</label>
+            <textarea class="form-control" id="prescription" rows="3"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Save</button>
+        </form>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="col-lg-4">
+    <div class="card shadow-sm">
+      <div class="card-header">
+        <h5>Provide Availability</h5>
+      </div>
+      <div class="card-body">
+        <table class="table table-bordered text-center">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Start Time</th>
+              <th>End Time</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>23/01/2025</td>
+              <td><input type="time" class="form-control" value="09:00"></td>
+              <td><input type="time" class="form-control" value="12:00"></td>
+            </tr>
+            <tr>
+              <td>24/01/2025</td>
+              <td><input type="time" class="form-control" value="13:00"></td>
+              <td><input type="time" class="form-control" value="17:00"></td>
+            </tr>
+            <tr>
+              <td>25/01/2025</td>
+              <td><input type="time" class="form-control" value="09:00"></td>
+              <td><input type="time" class="form-control" value="12:00"></td>
+            </tr>
+            </tbody>
+        </table>
+        <button class="btn btn-success w-100">Save</button>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

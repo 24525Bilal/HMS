@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}Welcome to HMS{% endblock %}
+
+{% block content %}
+  <div class="p-5 mb-4 bg-white rounded-3 shadow-sm text-center">
+    <div class="container-fluid py-5">
+      <h1 class="display-4">Welcome to the Hospital Management System</h1>
+      <p class="lead">Your one-stop solution for managing patients, doctors, and appointments efficiently.</p>
+      <hr class="my-4">
+      <p>Please log in to access your dashboard or register if you are a new patient.</p>
+      <a class="btn btn-primary btn-lg" href="{{ url_for('main.login') }}" role="button">Login</a>
+      <a class="btn btn-secondary btn-lg" href="{{ url_for('main.register') }}" role="button">Register</a>
+    </div>
+  </div>
+{% endblock %}

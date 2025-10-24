@@ -1,0 +1,146 @@
+{% extends "base.html" %}
+
+{% block title %}Patient Dashboard{% endblock %}
+
+{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-4">
+  <h2>Welcome Jayant</h2>
+  <div>
+    <a href="#" class="btn btn-outline-secondary">Edit Profile</a>
+    <a href="#" class="btn btn-outline-danger">Logout</a>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-lg-7">
+    
+    <div class="card shadow-sm mb-4">
+      <div class="card-header">
+        <h5>Upcoming Appointments</h5>
+      </div>
+      <div class="card-body">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Sr.No.</th>
+              <th>Doctor Name</th>
+              <th>Dept.</th>
+              <th>Date</th>
+              <th>Time</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>0001</td>
+              <td>Dr. Abcde</td>
+              <td>General</td>
+              <td>24/08/2025</td>
+              <td>09 PM - 10 PM</td>
+              <td>
+                <button class="btn btn-sm btn-danger">Cancel</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="card shadow-sm mb-4">
+      <div class="card-header">
+        <h5>Patient History</h5>
+        <small>Patient Name: Mr. Jayant</small>
+      </div>
+      <div class="card-body">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Visit No.</th>
+              <th>Visit Type</th>
+              <th>Diagnosis</th>
+              <th>Prescription</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>In-person</td>
+              <td>Abnormal</td>
+              <td>Medicine 1, exercise</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>In-person</td>
+              <td>Normal</td>
+              <td>Medicine 2</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-lg-5">
+    <div class="card shadow-sm">
+      <div class="card-header">
+        <h5>Department of Oncology</h5>
+      </div>
+      <div class="card-body">
+        <h6>Overview</h6>
+        <p><small>Oncology Department is a hospital dedicated to the diagnosis, treatment, and management of cancer. It includes medical oncologists, surgical oncologists, and radiation oncologists...</small></p>
+        
+        <h6>Doctors' list</h6>
+        <table class="table table-hover">
+          <tbody>
+            <tr>
+              <td>Dr. Abcde</td>
+              <td>
+                <button class="btn btn-sm btn-success">Check availability</button>
+                <button class="btn btn-sm btn-info">view details</button>
+              </td>
+            </tr>
+            <tr>
+              <td>Dr. Jayant</td>
+              <td>
+                <button class="btn btn-sm btn-success">Check availability</button>
+                <button class="btn btn-sm btn-info">view details</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    
+    <div class="card shadow-sm mt-4">
+      <div class="card-header">
+        <h5>Doctor's Availability</h5>
+      </div>
+      <div class="card-body">
+        <table class="table table-bordered text-center">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Time Slot</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>23/01/2025</td>
+                <td><button class="btn btn-sm btn-outline-success">09:00 - 12:00</button></td>
+              </tr>
+              <tr>
+                <td>24/01/2025</td>
+                <td><button class="btn btn-sm btn-outline-success">13:00 - 17:00</button></td>
+              </tr>
+              <tr>
+                <td>25/01/2025</td>
+                <td><button class="btn btn-sm btn-outline-success">09:00 - 12:00</button></td>
+              </tr>
+            </tbody>
+        </table>
+        <button class="btn btn-primary w-100">Book</button>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
